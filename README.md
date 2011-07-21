@@ -16,7 +16,7 @@ More to come.
 
 ## Dependencies
 
-jQuery (through a link to Google's CDN) and Sammy.js along with some Sammy.js plugins (Sammy.js and plugins are included via git submodules).
+jQuery (through a link to Google's CDN) and Sammy.js along with some Sammy.js plugins that are included in the javascripts directory.
 
 ## Author
 
