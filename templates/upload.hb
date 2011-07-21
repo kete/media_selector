@@ -1,0 +1,1 @@
+<li class="upload-link"><a href={{url}}>{{label}}</a></li>
