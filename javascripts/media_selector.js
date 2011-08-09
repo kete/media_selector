@@ -189,9 +189,6 @@
 		      // probably need to switch to $.ajax and more complete parameters call for jsonp
 		      result[size.name] = $.parseJSON(response);
 
-		      // TODO: broken response is persisting and each size is actually being set to results of small
-		      // delete response;
-
 		      // scope issue, response is set in calling scope, and not getting set with recursive call
 		      result.updateWithNeededSizesThenRender(context);
 		    })
@@ -242,6 +239,19 @@
 		// TODO: this is limited to same domain only for now, update to handle JSONP
 		// probably need to switch to $.ajax and more complete parameters call for jsonp
 		var selectionForTemplate = $.parseJSON(response);
+
+		// add alt value for selection so we can use it in template
+		var alt = selectionForTemplate.title;
+
+		// add a full stop to title for better accessibility
+		// start by stripping off trailing spaces for ease our following logic
+		alt = alt.replace(/\s+$/g, "");
+
+		if (alt.charAt( alt.length-1 ) === ".") {
+		  alt = alt + '. ';
+		}
+
+		selectionForTemplate.alt = alt;
 
 		// this view takes whole of view
 		context.partial('templates/selection.hb', selectionForTemplate);

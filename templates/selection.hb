@@ -8,7 +8,7 @@
 <div id="embed-details">
 <h3>Embed:</h3>
 
-<textarea class="selection-embed"><img src="{{url}}" width="{{width}}" height="{{height}}"> by <a href="{{author_url}}">{{author_name}}</a></textarea>
+<textarea class="selection-embed"><img src="{{url}}" width="{{width}}" height="{{height}}" alt="{{alt}}"> by <a href="{{author_url}}">{{author_name}}</a></textarea>
 
 </div>
 <div id="home-link"><a href="index.html">Back to Sources</a></div>
