@@ -7,11 +7,15 @@
     "sources": [
     { "name": "Latest",
       "url": "http://kete/en/site/all/images/rss.xml",
-      "searchable_stub": false
+      "searchable_stub": false,
+      "limit_parameter": "?count=",
+      "display_limit": 4
     },
     { "name": "Search",
       "url": "http://kete/en/site/search/images/for/terms/rss.xml?search_terms=",
-      "searchable_stub": true
+      "searchable_stub": true,
+      "limit_parameter": "&count=",
+      "display_limit": 4
     }
     ]
   }

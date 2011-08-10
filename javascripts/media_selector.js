@@ -357,6 +357,11 @@
 	    full_url += searchTerms;
 	  }
 
+	  if (typeof(source['limit_parameter']) != "undefined" &&
+	      typeof(source['display_limit']) != "undefined") {
+	    full_url += source.limit_parameter + source.display_limit;
+	  }
+
 	  var resultRequest = $.get(full_url)
 	    .success(function( response ) {
 		$('#results-spinner').hide();
@@ -370,9 +375,8 @@
 
 		$('#results h2').text(resultsTitle);
 
-		// TODO: replace hardcoded limit with configuration lookup
 		// TODO: provide pagination
-		var itemsLimit = 10;
+		var itemsLimit = source.display_limit;
 		var itemsCount = 0;
 
 		// items from rss items or atom entries
