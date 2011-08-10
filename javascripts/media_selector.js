@@ -332,7 +332,9 @@
 		    .appendTo("#" + providerListId);
 		});
 
-	      provider.upload_startpoint['url'] = provider.upload_startpoint['url'] + '&target_service=' + escape(context.stubUrlForResult());
+	      // HACK: for some reason when '&target_service=' + targetService is added, handlebars fails to parse {{url}} correctly
+	      // this worksaround the issue in an ugly fashion
+	      provider.upload_startpoint['target_service_param'] = '&target_service=' + escape(context.stubUrlForResult());
 
 	      if (typeof(provider.upload_startpoint) != "undefined") {
 		context.render('templates/upload.hb', provider.upload_startpoint)
