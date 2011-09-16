@@ -1,3 +1,15 @@
+/**
+ * media_selector.js
+ *
+ * Copyright 2011, Horowhenua Library Trust
+ * Released under MIT License, see included LICENSE file
+ *
+ * expects a mediaSelectorConfig object to be defined before this file is run
+ * it should look something like this:
+ *
+ * { directory: path/to/directory/for/config/files/ }
+ *
+ */
 (function($) {
   
   var app = $.sammy('#main', function() {
@@ -30,7 +42,7 @@
       // load providers data for every request
       this.around(function(callback) {
 	  var context = this;
-	  this.load('data/providers.json')
+	  this.load(mediaSelectorConfig.directory + 'providers.json')
             .then(function(providers) {
 		context.providers = providers;
 	      })
@@ -263,7 +275,7 @@
 	});
 
       function sizesLoadedInto(context) {
-	return $.get('data/sizes.json')
+	return $.get(mediaSelectorConfig.directory + 'sizes.json')
 	  .success(function(response) {
 	      context.sizes = $.parseJSON(response);
 	    })
@@ -310,6 +322,8 @@
 
 	      $.each(provider.sources, function(i, source) {
 		  source.sourceId = context.sourceIdFor(providerIndex, i);
+		  context.log("sourceId is: " + source.sourceId);
+
 		  var appropriate_template = context.sourceTemplateStub;
 
 		  if (selectedSource && source === selectedSource) {
