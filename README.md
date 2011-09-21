@@ -2,7 +2,7 @@
 
 ## Description
 
-A jQuery and Sammy.js based mini-application for choosing from a list of providers' media assets (images, audio, video, etc.). Used OpenSearch and oEmbed.
+A jQuery and Sammy.js based mini-application for choosing from a list of providers' media assets (images, audio, video, etc.). Uses OpenSearch and oEmbed so that it can be easily plugged into services that provide those standards.
 
 ## Installation
 
@@ -12,11 +12,11 @@ To set up, copy data/providers.json.example to data/providers.json and edit to s
 
 ## Usage
 
-More to come.
+See https://github.com/kete/image_selector_tinymce_plugin for how it can be configured to be used with a Rich Text Editor.
 
 ## Dependencies
 
-jQuery (through a link to Google's CDN) and Sammy.js along with some Sammy.js plugins that are included in the javascripts directory.
+jQuery (through a link to Google's CDN), Handlebars.js (through a link to cdnjs CDN), and Sammy.js along with some Sammy.js plugins that are included in the javascripts directory.
 
 ## Author
 

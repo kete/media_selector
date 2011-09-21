@@ -6,16 +6,22 @@
     "upload_startpoint": { "label": "or Upload New Image", "url": "http://kete/site/images/new?as_service=true&append_show_url=true" },
     "sources": [
     { "name": "Latest",
+      "media_type": "image",
+      "media_type_plural": "images",
       "url": "http://kete/en/site/all/images/rss.xml",
       "searchable_stub": false,
       "limit_parameter": "?count=",
-      "display_limit": 4
+      "display_limit": 4,
+      "page_parameter": "&page="
     },
     { "name": "Search",
+      "media_type": "image",
+      "media_type_plural": "images",
       "url": "http://kete/en/site/search/images/for/terms/rss.xml?search_terms=",
       "searchable_stub": true,
       "limit_parameter": "&count=",
-      "display_limit": 4
+      "display_limit": 4,
+      "page_parameter": "&page="
     }
     ]
   }

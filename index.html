@@ -3,25 +3,24 @@
 <head>
 <link rel="stylesheet" type="text/css" href="stylesheets/media_selector.css" />
 
-<title>Select an image</title>
+<title>Select image</title>
 </head>
 <body>
-
 <div id="main">
 
 <div id="providers">
-  <h2 class="section-header">Sources</h2>
-  <div id="providers-spinner"><img src="images/spinner.gif" width="16" height="16" alt="loading indicator. "></div>
-
+  <div id="providers-spinner" style="display: none"><img class="spinner" src="images/spinner.gif" width="16" height="16" alt="loading indicator. "></div>
 </div>
 
 <div id="results">
-  <h2 class="section-header">loading...</h2>
-  <div id="results-spinner"><img src="images/spinner.gif" width="16" height="16" alt="loading indicator. "></div>
+  <h2 class="section-header"></h2>
+  <div id="results-spinner" style="display: none"><img class="spinner" src="images/spinner.gif" width="16" height="16" alt="loading indicator. "></div>
 </div>
 
 <div style="clear:both;"></div>
 </div>
+
+<div id="page-spinner"><img class="spinner" src="images/spinner.gif" width="16" height="16" alt="loading indicator. "></div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
