@@ -3,7 +3,7 @@
     "title": "Kete",
     "domain": "kete",
     "oembed_endpoint": "http://kete/oembed",
-    "upload_startpoint": { "label": "or Upload New Image", "url": "http://kete/site/images/new?as_service=true&append_show_url=true" },
+    "upload_startpoint": { "label": "Upload New Image", "url": "http://kete/site/images/new?as_service=true&append_show_url=true" },
     "sources": [
     { "name": "Latest",
       "media_type": "image",
